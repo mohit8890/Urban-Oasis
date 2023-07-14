@@ -11,7 +11,7 @@ const Datatable = ({columns}) => {
   const location = useLocation();
   const path = location.pathname.split("/")[1];
   const [list, setList] = useState([]);
-  const { data, loading, error } = useFetch(`/${path}`);
+  const { data, loading, error } = useFetch(`http://localhost:8800/api/${path}`);
 
   useEffect(()=>{
 
@@ -23,7 +23,7 @@ const Datatable = ({columns}) => {
 
   const handleDelete =async (id) => {
     try {
-      await axios.delete(`/${path}/${id}`);
+      await axios.delete(`http://localhost:8800/api/${path}/${id}`);
      setList(list.filter((item) => item._id !== id));
     } catch (err) {}
   };
@@ -36,9 +36,9 @@ const Datatable = ({columns}) => {
       renderCell: (params) => {
         return (
           <div className="cellAction">
-            {/*<Link to="/users/test" style={{ textDecoration: "none" }}>
+            {/* <Link to="/users/test" style={{ textDecoration: "none" }}>
               <div className="viewButton">View</div>
-        </Link>*/}
+        </Link> */}
             <div
               className="deleteButton"
               onClick={() => handleDelete(params.row._id)}

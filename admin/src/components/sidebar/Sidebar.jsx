@@ -44,7 +44,7 @@ const Sidebar = () => {
       <div className="top">
         <Link to="/" style={{ textDecoration: "none" }}>
         <img className="logo" src={logo} alt="" />
-          <span className="logo">Book-Ez Admin</span>
+          <span className="logo">Urban Oasis Admin</span>
         </Link>
       </div>
       <hr />

@@ -18,16 +18,20 @@ router.get("/checkadmin/:id",verifyAdmin,(req,res,next)=>{
 })*/
  
  //update
- router.put("/update/:id",verifyUser,updateUser);
+//  router.put("/update/:id",verifyUser,updateUser);
+ router.put("/update/:id",updateUser);
 
  //delete
- router.delete("/:id",verifyUser,deleteUser);
+//  router.delete("/:id",verifyUser,deleteUser);
+ router.delete("/:id",deleteUser);
 
  //get
- router.get("/:id",verifyUser,getUser);
+//  router.get("/:id",verifyUser,getUser);
+ router.get("/:id",getUser);
 
  //get all
- router.get("/",verifyAdmin,getUsers);
+//  router.get("/",verifyAdmin,getUsers);
+ router.get("/",getUsers);
 
 
  
