@@ -39,7 +39,7 @@ const Footer=()=>{
                 <img className="logo1" src={logo} alt="" />
                 
                 
-                </Link> <span className="sp123"> © Copyright 2022. All Rights Reserved. BOOK-EZ,Inc.</span>
+                </Link> <span className="sp123"> © Copyright 2022. All Rights Reserved. Urban Oasis, Inc.</span>
                 <br />
 
             </div>
